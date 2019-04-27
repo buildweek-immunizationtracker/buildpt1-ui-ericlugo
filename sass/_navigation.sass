@@ -1,0 +1,66 @@
+.nav-bar
+  background-color: $nav-bg-color
+  color: $primary-font-color
+  display: flex
+  font-size: 1.5rem
+  justify-content: space-between
+  position: fixed
+  width: 100%
+  .open, .close
+    cursor: pointer
+    padding: 1rem
+    transition: .5s
+    &:hover
+      color: $secondary-font-color
+  .branding
+    font-weight: 700
+    padding: 1rem
+    transition: .25s
+    i
+      font-size: 1.25rem
+      padding-right: .25rem
+
+.site-nav
+  width: 0
+  overflow-x: hidden
+  height: 100vh
+  z-index: 1
+  position: fixed
+  top: 0
+  left: 0
+  background-color: $nav-bg-color
+  color: $primary-font-color
+  transition: 0.5s
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  // display: none
+  a
+    color: $primary-font-color
+    font-size: 1.5rem
+    display: block
+    text-decoration: none
+    transition: 0.25s
+  .nav-bar
+    position: relative
+  .nav-links
+    margin-top: 2.5rem
+    text-align: right
+    a
+      margin: .75rem 0
+      li
+        margin-right: 2rem
+      &:hover
+        background-color: $nav-bg-hover-color
+    .contact
+      i
+        background-color: $accent-btn-color
+        color: $accent-btn-text-color
+        padding: 1rem
+        border-radius: 50%
+        transition: .25s
+        &:hover
+          background-color: $accent-btn-hover-color
+
+      &:hover
+        background-color: $nav-bg-color
