@@ -1,14 +1,20 @@
 body
+  background: $background-color
   font: 100% $main-font-stack
+  text-align: center
 
 h1, h2, h3, h4, h5, h6
   font-family: $header-font-stack
 
-.container
-  align-content: center
-  display: flex
-  flex-flow: row wrap
-  justify-content: center
-  margin: 0 auto
-  text-align: center
-  width: 98%
+// .container
+//   margin-top: 4rem
+//   width: 100%
+
+.card
+  +level1
+  background-color: $card-bg-color
+  color: $primary-font-color
+  border-radius: 2px
+  display: inline-block
+  margin: 1rem
+  position: relative

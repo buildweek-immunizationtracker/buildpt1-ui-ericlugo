@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Immunization Tracker</title>
+
     <link rel="stylesheet" href="css/index.css" />
+
+    <script defer src="js/index.js"></script>
   </head>
   <body>
     <header class="nav-bar">
@@ -28,48 +31,48 @@
         </a>
       </ul>
       <ul class="action-buttons">
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Login</a></li>
+        <a href="#"><li>Login</li></a>
+        <a href="#"><li class="join">Join</li></a>
       </ul>
     </nav>
 
-    <div class="container">
-      <div>
-        <section class="call-to-action">
-          <h1>Life can be filled with <span>stress</span>...</h1>
-          <p>Let us help you take a <span>big one</span> off of your list!</p>
-          <button>Join Us</button>
-        </section>
-        <div>
-          <p>scroll down</p>
-          <i class="fas fa-chevron-down"></i>
-        </div>
+    <div class="card home-header">
+      <div></div>
+      <section class="call-to-action">
+        <p>Life can be filled with <span>stress</span>...</p>
+        <p>Let us help you take a <span>big one</span> off of your list!</p>
+        <a class="join">Join Us</a>
+      </section>
+      <div class="scroll">
+        <p>scroll down for more</p>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <article class="features">
-        <h1>How does ImmuTrack changes your life?</h1>
-        <section class="feature-card">
-          <h2>LOREM IPSUM</h2>
-          <img src="https://via.placeholder.com/300?text=image+goes+here" alt="" srcset="" />
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</p>
-          <button>See More</button>
-        </section>
-      </article>
-      <article class="testimonials">
-        <h1>See what these happy customers had to say!</h1>
-        <section>
-          <img src="https://via.placeholder.com/300?text=happy+face+goes+here" alt="" srcset="" />
-          <section class="feature-card">
-            <h2>LOREM IPSUM</h2>
-            <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</blockquote>
-            <button>See More</button>
-          </section>
-        </section>
-      </article>
-      <footer>
-        <p>&copy; <span class="copyright">ImmuTrack YEAR</span></p>
-      </footer>
     </div>
 
-    <script src="js/index.js"></script>
+    <article class="card features">
+      <h1>How does ImmuTrack changes your life?</h1>
+      <section class="feature-card">
+        <h2>LOREM IPSUM</h2>
+        <img src="https://via.placeholder.com/300?text=image+goes+here" alt="" srcset="" />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</p>
+        <button>See More</button>
+      </section>
+    </article>
+
+    <article class="card testimonials">
+      <h1>See what these happy customers had to say!</h1>
+      <section>
+        <img src="https://via.placeholder.com/300?text=happy+face+goes+here" alt="" srcset="" />
+        <section class="feature-card">
+          <h2>LOREM IPSUM</h2>
+          <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</blockquote>
+          <button>See More</button>
+        </section>
+      </section>
+    </article>
+
+    <footer>
+      <p>&copy; <span class="copyright">ImmuTrack YEAR</span></p>
+    </footer>
   </body>
 </html>

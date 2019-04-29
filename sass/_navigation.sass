@@ -1,66 +1,76 @@
 .nav-bar
-  background-color: $nav-bg-color
+  +level1
+  z-index: 1
+  background-color: $primary-color
   color: $primary-font-color
   display: flex
   font-size: 1.5rem
   justify-content: space-between
   position: fixed
+  top: 0
   width: 100%
   .open, .close
+    +transition
     cursor: pointer
-    padding: 1rem
-    transition: .5s
+    padding: .5rem 1rem
     &:hover
-      color: $secondary-font-color
+      color: $secondary-color
   .branding
     font-weight: 700
-    padding: 1rem
-    transition: .25s
+    padding: .5rem 1rem
     i
       font-size: 1.25rem
       padding-right: .25rem
 
 .site-nav
-  width: 0
+  +level1
+  background-color: $primary-color
+  color: $primary-font-color
   overflow-x: hidden
+  width: 0
   height: 100vh
-  z-index: 1
+  z-index: 2
   position: fixed
   top: 0
   left: 0
-  background-color: $nav-bg-color
-  color: $primary-font-color
-  transition: 0.5s
   display: flex
   flex-direction: column
   justify-content: space-between
-  // display: none
   a
     color: $primary-font-color
     font-size: 1.5rem
     display: block
     text-decoration: none
-    transition: 0.25s
   .nav-bar
+    box-shadow: none
     position: relative
   .nav-links
     margin-top: 2.5rem
     text-align: right
     a
-      margin: .75rem 0
+      +transition
+      margin: .5rem 0
       li
         margin-right: 2rem
       &:hover
-        background-color: $nav-bg-hover-color
+        color: $secondary-color-light
     .contact
       i
-        background-color: $accent-btn-color
-        color: $accent-btn-text-color
+        +button
+        margin-top: 1rem
         padding: 1rem
         border-radius: 50%
-        transition: .25s
-        &:hover
-          background-color: $accent-btn-hover-color
-
+  .action-buttons
+    display: flex
+    justify-content: space-around
+    margin-bottom: 2rem
+    li
+      +button
+      color: black
+      padding: .5rem 2.5rem
       &:hover
-        background-color: $nav-bg-color
+        color: black
+    .join
+      background-color: $secondary-color
+      &:hover
+        background-color: $secondary-color-light

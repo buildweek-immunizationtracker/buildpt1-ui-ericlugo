@@ -1,0 +1,31 @@
+.home-header
+  height: 100vh
+  width: 100vw
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  .call-to-action
+    margin-top: 3rem
+    padding: 1rem
+    font-size: 2rem
+    font-weight: 600
+    span
+      color: $primary-color-dark
+      text-transform: uppercase
+      font-weight: 900
+    .join
+      +button
+      display: block
+      margin: 1rem 2rem 0 2rem
+      padding: .5rem 2.5rem
+      background-color: $secondary-color
+      &:hover
+        background-color: $secondary-color-light
+  .scroll
+    p
+      font-size: .75rem
+    i
+      margin-top: -.5rem
+      font-size: 2rem
