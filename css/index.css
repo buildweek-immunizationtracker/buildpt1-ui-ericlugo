@@ -6064,6 +6064,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffff74;
 }
 
+footer.card {
+  background-color: #0077c1;
+  color: #e2e1e0;
+  font-weight: 700;
+  padding: 1rem;
+  margin: 0;
+}
+
 .home .header {
   background: url(../img/checking_boxes.svg) no-repeat center;
   background-color: #ffffff;
