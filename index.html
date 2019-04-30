@@ -10,9 +10,10 @@
 
     <script defer src="js/index.js"></script>
   </head>
-  <body>
+
+  <body class="home">
     <header class="nav-bar">
-      <span class="open fa fa-bars"></span>
+      <p class="open fa fa-bars"><span>Menu</span></p>
       <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
     </header>
 
@@ -36,40 +37,68 @@
       </ul>
     </nav>
 
-    <div class="card home-header">
-      <div></div>
+    <div class="card header">
       <section class="call-to-action">
         <p>Life can be filled with <span>stress</span>...</p>
         <p>Let us help you take a <span>big one</span> off of your list!</p>
-        <a class="join">Join Us</a>
       </section>
       <div class="scroll">
+        <a class="join">Join Us</a>
         <p>scroll down for more</p>
         <i class="fas fa-chevron-down"></i>
       </div>
     </div>
 
-    <article class="card features">
-      <h1>How does ImmuTrack changes your life?</h1>
-      <section class="feature-card">
-        <h2>LOREM IPSUM</h2>
-        <img src="https://via.placeholder.com/300?text=image+goes+here" alt="" srcset="" />
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</p>
-        <button>See More</button>
-      </section>
-    </article>
-
-    <article class="card testimonials">
-      <h1>See what these happy customers had to say!</h1>
-      <section>
-        <img src="https://via.placeholder.com/300?text=happy+face+goes+here" alt="" srcset="" />
-        <section class="feature-card">
-          <h2>LOREM IPSUM</h2>
-          <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</blockquote>
-          <button>See More</button>
-        </section>
-      </section>
-    </article>
+    <div class="tabs">
+      <div class="card">
+        <div class="tab-links">
+          <a class="tab-link tab-link-selected" data-tab="feature">Features</a>
+          <a class="tab-link" data-tab="testimonial">Testimonials</a>
+        </div>
+        <span class="arrow prev fas fa-chevron-circle-left"></span>
+        <div class="tab-items">
+          <h1 class="call-tag" data-tab="feature">How can ImmuTrack help you?</h1>
+          <article class="tab-item tab-item-selected" data-tab="feature">
+            <h1>Lorem Ipsum</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="tab-item" data-tab="feature">
+            <h1>Lorem Ipsum</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="tab-item" data-tab="feature">
+            <h1>Lorem Ipsum</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <h1 class="call-tag" data-tab="testimonial">Check out what these people had to say!</h1>
+          <article class="tab-item tab-item-selected" data-tab="testimonial">
+            <h1>LOREM IPSUM</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="tab-item" data-tab="testimonial">
+            <h1>LOREM IPSUM</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="tab-item" data-tab="testimonial">
+            <h1>LOREM IPSUM</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+        </div>
+        <span class="arrow next fas fa-chevron-circle-right"></span>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; <span class="copyright">ImmuTrack YEAR</span></p>

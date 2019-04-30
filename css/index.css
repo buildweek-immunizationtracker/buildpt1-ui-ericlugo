@@ -5878,6 +5878,13 @@ button {
   cursor: pointer;
 }
 
+html {
+  box-sizing: border-box;
+}
+html *, html *:before, html *:after {
+  box-sizing: inherit;
+}
+
 body {
   background: #e2e1e0;
   font: 100% "Source Sans Pro", sans-serif;
@@ -5898,7 +5905,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   color: #000000;
   border-radius: 2px;
-  display: inline-block;
+  display: block;
   margin: 1rem;
   position: relative;
 }
@@ -5931,6 +5938,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-bar .open:hover, .nav-bar .close:hover {
   color: #ffd740;
+}
+.nav-bar .open span, .nav-bar .close span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0.75rem;
+  font-size: 1rem;
+  vertical-align: middle;
 }
 .nav-bar .branding {
   font-weight: 700;
@@ -6049,26 +6064,40 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffff74;
 }
 
-.home-header {
+.home .header {
+  background: url(../img/checking_boxes.svg) no-repeat center;
+  background-color: #ffffff;
+  background-size: contain;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.home-header .call-to-action {
+.home .header .call-to-action {
   margin-top: 3rem;
   padding: 1rem;
   font-size: 2rem;
   font-weight: 600;
+  text-shadow: 0 0 5px #ffffff;
 }
-.home-header .call-to-action span {
+.home .header .call-to-action span {
   color: #0077c1;
   text-transform: uppercase;
   font-weight: 900;
 }
-.home-header .call-to-action .join {
+.home .header .scroll {
+  line-height: 0.5rem;
+}
+.home .header .scroll p {
+  font-size: 0.75rem;
+  text-shadow: 0 0 5px #ffffff;
+}
+.home .header .scroll i {
+  font-size: 1rem;
+}
+.home .header .scroll .join {
   background-color: #0077c1;
   color: #42a5f4;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -6077,12 +6106,14 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: block;
-  margin: 1rem 2rem 0 2rem;
-  padding: 0.5rem 2.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 2rem;
+  padding: 1rem 2.5rem;
   background-color: #ffd740;
 }
-.home-header .call-to-action .join:hover {
+.home .header .scroll .join:hover {
   background-color: #80d6ff;
   color: #0077c1;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -6092,13 +6123,122 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.home-header .call-to-action .join:hover {
+.home .header .scroll .join:hover {
   background-color: #ffff74;
 }
-.home-header .scroll p {
-  font-size: 0.75rem;
+.home .tabs {
+  width: 100%;
+  margin: 1rem 0;
 }
-.home-header .scroll i {
-  margin-top: -0.5rem;
+.home .tabs .card {
+  position: relative;
+}
+.home .tabs .card .tab-links {
+  width: 100%;
+  background-color: #42a5f4;
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: flex-start;
+}
+.home .tabs .card .tab-links .tab-link {
+  background-color: #0077c1;
+  color: #42a5f4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  color: #ffffff;
+}
+.home .tabs .card .tab-links .tab-link:hover {
+  background-color: #80d6ff;
+  color: #0077c1;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.home .tabs .card .tab-links .tab-link:hover {
+  background-color: #42a5f4;
+  color: #ffff74;
+}
+.home .tabs .card .arrow {
+  cursor: pointer;
+  position: absolute;
+  color: #0077c1;
+  top: 50%;
   font-size: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.home .tabs .card .arrow:hover {
+  text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.home .tabs .card .prev {
+  left: 0.5rem;
+}
+.home .tabs .card .next {
+  right: 0.5rem;
+}
+.home .tabs .card .tab-items .call-tag {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+}
+.home .tabs .card .tab-items .tab-item {
+  margin: 1rem 3rem;
+}
+.home .tabs .card .tab-items .tab-item h1 {
+  font-weight: 700;
+  text-align: left;
+}
+.home .tabs .card .tab-items .tab-item p {
+  margin: 1rem 0;
+}
+.home .tabs .card .tab-items .tab-item a {
+  background-color: #0077c1;
+  color: #42a5f4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 1rem 1rem 1rem;
+  padding: 0 2.5rem;
+  background-color: #ffd740;
+}
+.home .tabs .card .tab-items .tab-item a:hover {
+  background-color: #80d6ff;
+  color: #0077c1;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.home .tabs .card .tab-items .tab-item a:hover {
+  background-color: #ffff74;
+}
+.home .tabs .card .tab-items .tab-item .image {
+  width: 100%;
+  height: 10rem;
+  background: url(../img/checking_boxes.svg) no-repeat center;
+  background-size: contain;
 }
