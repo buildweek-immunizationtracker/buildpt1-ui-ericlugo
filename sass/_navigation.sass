@@ -3,71 +3,55 @@
   z-index: 1
   background-color: $primary-color
   color: $primary-font-color
-  display: flex
-  font-size: 1.5rem
-  justify-content: space-between
-  align-items: center
   position: fixed
   top: 0
   width: 100%
-  a
-    color: $primary-font-color
+  .container
+    display: flex
     font-size: 1.5rem
-    display: block
-    text-decoration: none
-  .open, .close
-    +transition
-    cursor: pointer
-    padding: .5rem 1rem
-    &:hover
-      color: $secondary-color
-    span
-      font-family: $main-font-stack
-      font-weight: 600
-      text-transform: uppercase
-      margin-left: .75rem
-      font-size: 1rem
-      vertical-align: middle
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin: 0 auto
     +breakpoint(desktop)
-      display: none
-  .branding
-    font-weight: 700
-    padding: .5rem 1rem
-    i
-      font-size: 1.25rem
-      padding-right: .25rem
-  .nav-links
-    display: none
-    justify-content: center
-    +breakpoint(desktop)
-      display: flex
+      max-width: 1000px
     a
-      font-size: 1.25rem
-      padding: .5rem 1rem
-      font-weight: 600
-      color: $card-bg-color
-      &:hover
-        color: $secondary-color
-  .action-buttons
-    display: none
-    +breakpoint(desktop)
-      display: flex
-    a, span
-      +button
-      color: black
-      font-size: 1rem
-      padding: .5rem 1.5rem
-      margin: .5rem
-      list-style: none
-      &:hover
+      color: $primary-font-color
+      font-size: 1.5rem
+      display: block
+      text-decoration: none
+    .nav-links
+      display: none
+      justify-content: center
+      +breakpoint(desktop)
+        display: flex
+      a
+        font-size: 1.25rem
+        padding: .5rem 1rem
+        font-weight: 600
+        color: $card-bg-color
+        &:hover
+          color: $secondary-color
+    .action-buttons
+      display: none
+      +breakpoint(desktop)
+        display: flex
+      a, span
+        +button
         color: black
-    .join
-      background-color: $secondary-color
-      &:hover
-        background-color: $secondary-color-light
-      p
-        font-size: .75rem
-        line-height: 1rem
+        font-size: 1rem
+        padding: .5rem 1.5rem
+        margin: .5rem
+        list-style: none
+        &:hover
+          color: black
+      .join
+        background-color: $secondary-color
+        &:hover
+          background-color: $secondary-color-light
+        p
+          font-size: .75rem
+          line-height: 1rem
 .join-popup
   display: none
   font-family: $main-font-stack
@@ -118,6 +102,28 @@
 .join-popup.active
   display: inherit
 
+.open, .close
+  +transition
+  cursor: pointer
+  padding: .5rem 1rem
+  &:hover
+    color: $secondary-color
+  span
+    font-family: $main-font-stack
+    font-weight: 600
+    text-transform: uppercase
+    margin-left: .75rem
+    font-size: 1rem
+    vertical-align: middle
+  +breakpoint(desktop)
+    display: none
+.branding
+  font-weight: 700
+  padding: .5rem 1rem
+  i
+    font-size: 1.25rem
+    padding-right: .25rem
+
 .site-nav
   +level1
   background-color: $primary-color
@@ -140,6 +146,15 @@
     display: block
     text-decoration: none
   .nav-bar
+    +level1
+    z-index: 1
+    background-color: $primary-color
+    color: $primary-font-color
+    width: 100%
+    display: flex
+    font-size: 1.5rem
+    justify-content: space-between
+    align-items: center
     box-shadow: none
     position: relative
   .nav-links

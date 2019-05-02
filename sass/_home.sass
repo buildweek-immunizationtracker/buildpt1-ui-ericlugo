@@ -38,7 +38,11 @@
           background-color: $secondary-color-light
   .tabs
     width: 100%
-    margin: 1rem 0
+    margin: 1rem auto
+    +breakpoint(tablet)
+      max-width: 800px
+    +breakpoint(desktop)
+      max-width: 900px
     .card
       position: relative
       padding-bottom: 1rem
@@ -115,7 +119,7 @@
             height: 10rem
             background: url(../img/checking_boxes.svg) no-repeat center
             background-size: contain
-            +breakpoint(desktop)
+            +breakpoint(tablet)
               height: 20rem
         .slide.active
           display: inherit
