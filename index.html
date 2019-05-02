@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Immunization Tracker</title>
+
     <link rel="stylesheet" href="css/index.css" />
+
+    <script defer src="js/index.js"></script>
   </head>
-  <body>
+
+  <body class="home">
     <header class="nav-bar">
-      <span class="open fa fa-bars"></span>
-      <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
+      <div class="container">
+        <p class="open fa fa-bars"><span>Menu</span></p>
+        <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
+        <ul class="nav-links">
+          <a href="./index.html"><li>Home</li></a>
+          <a href="#"><li>Features</li></a>
+          <a href="#"><li>Stories</li></a>
+          <a href="#"><li>Our Team</li></a>
+          <a class="contact" href="#">
+            <li><i class="far fa-envelope"></i></li>
+          </a>
+        </ul>
+        <div class="action-buttons">
+          <a href="#" class="join join-button">Join</a>
+          <a href="https://confident-bardeen-cd396a.netlify.com/login">Login</a>
+        </div>
+      </div>
     </header>
+
+    <section class="card join-popup">
+      <a class="fa fa-times join-close"></a>
+      <h1>Please choose one of the following:</h1>
+      <div>
+        <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-patient">
+          Join
+          <p>as Patient</p>
+        </a>
+        <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-provider">
+          Join
+          <p>as Provider</p>
+        </a>
+      </div>
+    </section>
 
     <nav class="site-nav">
       <div class="nav-bar">
@@ -19,7 +53,7 @@
         <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
       </div>
       <ul class="nav-links">
-        <a href="#"><li>Home</li></a>
+        <a href="./index.html"><li>Home</li></a>
         <a href="#"><li>Features</li></a>
         <a href="#"><li>Stories</li></a>
         <a href="#"><li>Our Team</li></a>
@@ -27,49 +61,90 @@
           <li><i class="far fa-envelope"></i></li>
         </a>
       </ul>
-      <ul class="action-buttons">
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
+      <div class="action-buttons">
+        <div class="join-stack">
+          <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-patient">
+            Join
+            <p>as Patient</p>
+          </a>
+          <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-provider">
+            Join
+            <p>as Provider</p>
+          </a>
+        </div>
+        <a href="https://confident-bardeen-cd396a.netlify.com/login">Login</a>
+      </div>
     </nav>
 
-    <div class="container">
-      <div>
-        <section class="call-to-action">
-          <h1>Life can be filled with <span>stress</span>...</h1>
-          <p>Let us help you take a <span>big one</span> off of your list!</p>
-          <button>Join Us</button>
-        </section>
-        <div>
-          <p>scroll down</p>
-          <i class="fas fa-chevron-down"></i>
-        </div>
+    <div class="card header">
+      <section class="call-to-action">
+        <p>Life can be filled with <span>stress</span>...</p>
+        <p>Let us help you take a <span>big one</span> off of your list!</p>
+      </section>
+      <div class="scroll">
+        <a class="join">Join Now!</a>
+        <p>scroll down for more</p>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <article class="features">
-        <h1>How does ImmuTrack changes your life?</h1>
-        <section class="feature-card">
-          <h2>LOREM IPSUM</h2>
-          <img src="https://via.placeholder.com/300?text=image+goes+here" alt="" srcset="" />
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</p>
-          <button>See More</button>
-        </section>
-      </article>
-      <article class="testimonials">
-        <h1>See what these happy customers had to say!</h1>
-        <section>
-          <img src="https://via.placeholder.com/300?text=happy+face+goes+here" alt="" srcset="" />
-          <section class="feature-card">
-            <h2>LOREM IPSUM</h2>
-            <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque dignissimos consectetur minima assumenda. Illo perspiciatis quas voluptate assumenda beatae, error possimus harum iste dicta laborum sint unde culpa non dolor!</blockquote>
-            <button>See More</button>
-          </section>
-        </section>
-      </article>
-      <footer>
-        <p>&copy; <span class="copyright">ImmuTrack YEAR</span></p>
-      </footer>
     </div>
 
-    <script src="js/index.js"></script>
+    <div class="tabs">
+      <div class="card">
+        <div class="tab-links">
+          <a class="tab-link active" data-tab="feature">Features</a>
+          <a class="tab-link" data-tab="testimonial">Testimonials</a>
+        </div>
+        <div class="card carousel active" data-tab="feature">
+          <h1 class="call-tag">How can ImmuTrack help you?</h1>
+          <article class="slide active" data-tab="feature">
+            <h1>Lorem Ipsum F1</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="slide" data-tab="feature">
+            <h1>Lorem Ipsum F2</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="slide" data-tab="feature">
+            <h1>Lorem Ipsum F3</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <span class="arrow prev fas fa-chevron-circle-left" data-tab="feature"></span>
+          <span class="arrow next fas fa-chevron-circle-right" data-tab="feature"></span>
+        </div>
+        <div class="card carousel" data-tab="testimonial">
+          <h1 class="call-tag">Check out what these people had to say!</h1>
+          <article class="slide active" data-tab="testimonial">
+            <h1>LOREM IPSUM T1</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="slide" data-tab="testimonial">
+            <h1>LOREM IPSUM T2</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <article class="slide" data-tab="testimonial">
+            <h1>LOREM IPSUM T3</h1>
+            <div class="image"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
+            <a href="#">See More</a>
+          </article>
+          <span class="arrow prev fas fa-chevron-circle-left" data-tab="testimonial"></span>
+          <span class="arrow next fas fa-chevron-circle-right" data-tab="testimonial"></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="card">
+      <p>&copy; ImmuTrack <span class="copyright">YEAR</span></p>
+    </footer>
   </body>
 </html>
