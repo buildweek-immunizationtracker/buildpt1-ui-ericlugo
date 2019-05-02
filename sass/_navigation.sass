@@ -6,9 +6,15 @@
   display: flex
   font-size: 1.5rem
   justify-content: space-between
+  align-items: center
   position: fixed
   top: 0
   width: 100%
+  a
+    color: $primary-font-color
+    font-size: 1.5rem
+    display: block
+    text-decoration: none
   .open, .close
     +transition
     cursor: pointer
@@ -22,12 +28,95 @@
       margin-left: .75rem
       font-size: 1rem
       vertical-align: middle
+    +breakpoint(desktop)
+      display: none
   .branding
     font-weight: 700
     padding: .5rem 1rem
     i
       font-size: 1.25rem
       padding-right: .25rem
+  .nav-links
+    display: none
+    justify-content: center
+    +breakpoint(desktop)
+      display: flex
+    a
+      font-size: 1.25rem
+      padding: .5rem 1rem
+      font-weight: 600
+      color: $card-bg-color
+      &:hover
+        color: $secondary-color
+  .action-buttons
+    display: none
+    +breakpoint(desktop)
+      display: flex
+    a, span
+      +button
+      color: black
+      font-size: 1rem
+      padding: .5rem 1.5rem
+      margin: .5rem
+      list-style: none
+      &:hover
+        color: black
+    .join
+      background-color: $secondary-color
+      &:hover
+        background-color: $secondary-color-light
+      p
+        font-size: .75rem
+        line-height: 1rem
+.join-popup
+  display: none
+  font-family: $main-font-stack
+  font-weight: 600
+  margin: 0
+  padding: 1rem 4rem
+  z-index: 3
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateY(-50%) translateX(-50%)
+  .join-close
+    +button
+    position: absolute
+    top: 0
+    right: 0
+    font-size: 1rem
+    line-height: .75rem
+    color: $card-bg-color
+    padding: .5rem
+    margin: .25rem
+    border-radius: 50%
+    &:hover
+      color: $secondary-color-light
+  h1
+    font-size: 1.5rem
+    margin: 1rem 0
+  div
+    display: flex
+    justify-content: space-around
+    a
+      +button
+      color: $primary-font-color
+      text-decoration: none
+      display: inline-block
+      font-size: 1rem
+      padding: .5rem 1.5rem
+      margin: .5rem
+      &:hover
+        color: black
+    .join
+      background-color: $secondary-color
+      &:hover
+        background-color: $secondary-color-light
+      p
+        font-size: .75rem
+        line-height: 1rem
+.join-popup.active
+  display: inherit
 
 .site-nav
   +level1
@@ -36,13 +125,15 @@
   overflow-x: hidden
   width: 0
   height: 100vh
-  z-index: 2
+  z-index: 3
   position: fixed
   top: 0
   left: 0
   display: flex
   flex-direction: column
   justify-content: space-between
+  +breakpoint(phablet)
+    max-width: 400px
   a
     color: $primary-font-color
     font-size: 1.5rem
@@ -69,9 +160,11 @@
         border-radius: 50%
   .action-buttons
     display: flex
+    align-items: flex-end
     justify-content: space-around
+    margin-top: -8rem
     margin-bottom: 2rem
-    li
+    a
       +button
       color: black
       padding: .5rem 2.5rem
@@ -79,5 +172,9 @@
         color: black
     .join
       background-color: $secondary-color
+      margin-top: 1.5rem
       &:hover
         background-color: $secondary-color-light
+      p
+        font-size: .75rem
+        line-height: 1rem

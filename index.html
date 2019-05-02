@@ -15,15 +15,8 @@
     <header class="nav-bar">
       <p class="open fa fa-bars"><span>Menu</span></p>
       <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
-    </header>
-
-    <nav class="site-nav">
-      <div class="nav-bar">
-        <a class="fa fa-times close"></a>
-        <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
-      </div>
       <ul class="nav-links">
-        <a href="#"><li>Home</li></a>
+        <a href="./index.html"><li>Home</li></a>
         <a href="#"><li>Features</li></a>
         <a href="#"><li>Stories</li></a>
         <a href="#"><li>Our Team</li></a>
@@ -31,10 +24,54 @@
           <li><i class="far fa-envelope"></i></li>
         </a>
       </ul>
-      <ul class="action-buttons">
-        <a href="#"><li>Login</li></a>
-        <a href="#"><li class="join">Join</li></a>
+      <div class="action-buttons">
+        <a href="#" class="join join-button">Join</a>
+        <a href="https://confident-bardeen-cd396a.netlify.com/login">Login</a>
+      </div>
+    </header>
+
+    <section class="card join-popup">
+      <a class="fa fa-times join-close"></a>
+      <h1>Please choose one of the following:</h1>
+      <div>
+        <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-patient">
+          Join
+          <p>as Patient</p>
+        </a>
+        <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-provider">
+          Join
+          <p>as Provider</p>
+        </a>
+      </div>
+    </section>
+
+    <nav class="site-nav">
+      <div class="nav-bar">
+        <a class="fa fa-times close"></a>
+        <h1 class="branding"><i class="fas fa-syringe"></i>ImmuTrack</h1>
+      </div>
+      <ul class="nav-links">
+        <a href="./index.html"><li>Home</li></a>
+        <a href="#"><li>Features</li></a>
+        <a href="#"><li>Stories</li></a>
+        <a href="#"><li>Our Team</li></a>
+        <a class="contact" href="#">
+          <li><i class="far fa-envelope"></i></li>
+        </a>
       </ul>
+      <div class="action-buttons">
+        <div class="join-stack">
+          <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-patient">
+            Join
+            <p>as Patient</p>
+          </a>
+          <a class="join" href="https://confident-bardeen-cd396a.netlify.com/register-provider">
+            Join
+            <p>as Provider</p>
+          </a>
+        </div>
+        <a href="https://confident-bardeen-cd396a.netlify.com/login">Login</a>
+      </div>
     </nav>
 
     <div class="card header">
@@ -43,7 +80,7 @@
         <p>Let us help you take a <span>big one</span> off of your list!</p>
       </section>
       <div class="scroll">
-        <a class="join">Join Us</a>
+        <a class="join">Join Now!</a>
         <p>scroll down for more</p>
         <i class="fas fa-chevron-down"></i>
       </div>
@@ -55,53 +92,57 @@
           <a class="tab-link active" data-tab="feature">Features</a>
           <a class="tab-link" data-tab="testimonial">Testimonials</a>
         </div>
-        <span class="arrow prev fas fa-chevron-circle-left"></span>
-        <div class="tab-items">
-          <h1 class="call-tag" data-tab="feature">How can ImmuTrack help you?</h1>
-          <article class="tab-item active" data-tab="feature">
+        <div class="card carousel active" data-tab="feature">
+          <h1 class="call-tag">How can ImmuTrack help you?</h1>
+          <article class="slide active" data-tab="feature">
             <h1>Lorem Ipsum F1</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
-          <article class="tab-item" data-tab="feature">
+          <article class="slide" data-tab="feature">
             <h1>Lorem Ipsum F2</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
-          <article class="tab-item" data-tab="feature">
+          <article class="slide" data-tab="feature">
             <h1>Lorem Ipsum F3</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
-          <h1 class="call-tag" data-tab="testimonial">Check out what these people had to say!</h1>
-          <article class="tab-item active" data-tab="testimonial">
+          <span class="arrow prev fas fa-chevron-circle-left" data-tab="feature"></span>
+          <span class="arrow next fas fa-chevron-circle-right" data-tab="feature"></span>
+        </div>
+        <div class="card carousel" data-tab="testimonial">
+          <h1 class="call-tag">Check out what these people had to say!</h1>
+          <article class="slide active" data-tab="testimonial">
             <h1>LOREM IPSUM T1</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
-          <article class="tab-item" data-tab="testimonial">
+          <article class="slide" data-tab="testimonial">
             <h1>LOREM IPSUM T2</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
-          <article class="tab-item" data-tab="testimonial">
+          <article class="slide" data-tab="testimonial">
             <h1>LOREM IPSUM T3</h1>
             <div class="image"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, porro minus enim sint accusamus totam!</p>
             <a href="#">See More</a>
           </article>
+          <span class="arrow prev fas fa-chevron-circle-left" data-tab="testimonial"></span>
+          <span class="arrow next fas fa-chevron-circle-right" data-tab="testimonial"></span>
         </div>
-        <span class="arrow next fas fa-chevron-circle-right"></span>
       </div>
     </div>
 
     <footer class="card">
-      <p>&copy; <span class="copyright">ImmuTrack YEAR</span></p>
+      <p>&copy; ImmuTrack <span class="copyright">YEAR</span></p>
     </footer>
   </body>
 </html>
