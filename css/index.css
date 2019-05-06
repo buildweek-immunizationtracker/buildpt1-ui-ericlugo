@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,500,700,900");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900");
+@import url("https://fonts.googleapis.com/css?family=Rokkitt:500,700,900");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900");
 /*!
  * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6033,7 +6033,7 @@ h1, h2, h3, h4, h5, h6 {
 .join-popup {
   display: none;
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   padding: 1rem 4rem;
   z-index: 3;
@@ -6309,7 +6309,7 @@ h1, h2, h3, h4, h5, h6 {
 footer.card {
   background-color: #0077c1;
   color: #e2e1e0;
-  font-weight: 700;
+  font-weight: 600;
   padding: 1rem;
   margin: 0;
 }
@@ -6478,7 +6478,7 @@ footer.card {
   padding: 0.5rem 1rem;
 }
 .home .tabs .card .carousel .call-tag {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.25rem;
   padding: 0.25rem;
@@ -6490,7 +6490,7 @@ footer.card {
 }
 .home .tabs .card .carousel .slide h1 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   line-height: 1.5rem;
   margin-bottom: 2rem;
@@ -6781,7 +6781,7 @@ footer.card {
   }
 }
 .about .members .member .bio .role {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.75rem;
 }
 @media (min-width: 800px) {
@@ -6861,7 +6861,7 @@ footer.card {
 }
 .features .header div p {
   margin: 1rem auto;
-  weight: 600;
+  font-weight: 600;
   font-size: 1.25rem;
 }
 .features article {
@@ -6871,7 +6871,7 @@ footer.card {
   padding: 1rem;
 }
 .features article h1 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   padding: 0.5rem 0;
 }
