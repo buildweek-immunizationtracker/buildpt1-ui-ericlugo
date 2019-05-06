@@ -9,10 +9,12 @@ function navbarSetup() {
     joinPopup.classList.add('active');
     document.body.classList.add('overlay');
   });
-  joinOpenCTA.addEventListener('click', (event) => {
-    joinPopup.classList.add('active');
-    document.body.classList.add('overlay');
-  });
+  if (joinOpenCTA) {
+    joinOpenCTA.addEventListener('click', (event) => {
+      joinPopup.classList.add('active');
+      document.body.classList.add('overlay');
+    });
+  }
   // if close button is clicked remove overlay and hide popup box
   joinClose.addEventListener('click', (event) => {
     joinPopup.classList.remove('active');
