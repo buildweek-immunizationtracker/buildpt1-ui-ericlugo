@@ -26,12 +26,19 @@
       +breakpoint(desktop)
         display: flex
       a
+        border-radius: 2px
         font-size: 1.25rem
-        padding: .5rem 1rem
+        padding: .1rem 1rem
         font-weight: 600
         color: $card-bg-color
+        border-top: 2px solid $primary-color
+        border-bottom: 2px solid $primary-color
         &:hover
           color: $secondary-color
+      .active
+        color: $secondary-color
+        border-top: 2px solid $secondary-color
+        border-bottom: 2px solid $secondary-color
     .action-buttons
       display: none
       +breakpoint(desktop)
@@ -55,7 +62,7 @@
 .join-popup
   display: none
   font-family: $main-font-stack
-  font-weight: 600
+  font-weight: 700
   margin: 0
   padding: 1rem 4rem
   z-index: 3
@@ -161,6 +168,7 @@
     margin-top: 2.5rem
     text-align: right
     a
+      border-right: 2px solid $primary-color
       +transition
       margin: .5rem 0
       li
@@ -173,11 +181,16 @@
         margin-top: 1rem
         padding: 1rem
         border-radius: 50%
+    .active
+      background-color: $primary-color-light
+      border-radius: 2px
+      border-right: 2px solid $secondary-color
+      border-left: 2px solid $secondary-color
   .action-buttons
     display: flex
     align-items: flex-end
     justify-content: space-around
-    margin-top: -8rem
+    margin-top: -4rem
     margin-bottom: 2rem
     a
       +button

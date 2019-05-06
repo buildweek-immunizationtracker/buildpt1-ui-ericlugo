@@ -1,10 +1,15 @@
 /* <== NAVBAR VARIABLES & LISTENERS ==> */
 function navbarSetup() {
   const joinOpen = document.querySelector('.action-buttons .join');
+  const joinOpenCTA = document.querySelector('.home .header .scroll .join');
   const joinPopup = document.querySelector('.join-popup');
   const joinClose = document.querySelector('.join-close');
   // if join button is clicked add overlay and show popup box
   joinOpen.addEventListener('click', (event) => {
+    joinPopup.classList.add('active');
+    document.body.classList.add('overlay');
+  });
+  joinOpenCTA.addEventListener('click', (event) => {
     joinPopup.classList.add('active');
     document.body.classList.add('overlay');
   });
